@@ -1,0 +1,26 @@
+version: '3'
+services:
+  db:
+    image: mariadb:10.3
+    restart: always
+    volumes:
+      - ./wp-data:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: hiid
+      MYSQL_PASSWORD: top-secret-hiid
+  wordpress:
+      image: wordpress:4.8-php7.1-apache
+      restart: always
+      ports:
+        - 8080:80
+      volumes:
+        - ./wp-app:/var/www/html
+      environment:
+        WORDPRESS_DB_HOST: db
+        WORDPRESS_DB_NAME: wordpress
+        WORDPRESS_DB_USER: hiid
+        WORDPRESS_DB_PASSWORD: top-secret-hiid
+      depends_on:
+        - db
