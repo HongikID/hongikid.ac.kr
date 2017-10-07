@@ -1,3 +1,6 @@
 .idea/
+
+wp-app/index.php
 wp-data/*
+
 !.gitkeep
