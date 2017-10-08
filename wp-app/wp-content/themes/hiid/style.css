@@ -118,7 +118,7 @@ p {
     padding: 14px 0 106px 0;
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
+    overflow: visible;
     list-style-type: none;
 }
 
@@ -171,17 +171,15 @@ p {
     width: 100%;
     display: none;
     background-color: #ffffff;
-    z-index: 1;
     list-style-type: none;
+    position: absolute;
+    top: 18px;
+    z-index: 1;
     padding: 0;
 }
 
 #header__nav__list .sub-menu li {
     padding: 24px 0 0 0;
-}
-
-#header__nav__list .sub-menu li:first-child {
-    padding: 45px 0 0 0;
 }
 
 #header__nav__list .sub-menu a {
@@ -285,7 +283,9 @@ p {
     }
 
     #header__nav__list .sub-menu {
-        display: inherit;
+        display: block;
+        position: relative;
+        padding: 0;
     }
 
     #header__nav__list .sub-menu li {
