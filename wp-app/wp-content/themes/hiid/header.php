@@ -15,7 +15,7 @@
 <header>
     <div class="header__title container">
         <a href="javascript:void(0);" id="header__nav__toggle-btn" onclick="onNavToggleButtonClicked();">메뉴 여닫기</a>
-        <h1 id="header__title__logo">Hongik Industrial Design</h1>
+        <a href="/"><h1 id="header__title__logo">Hongik Industrial Design</h1></a>
     </div>
     <?php
     wp_nav_menu(
