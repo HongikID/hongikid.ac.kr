@@ -78,6 +78,10 @@ main {
     padding: 6rem 0 2.5rem 0; /* 3.5 + 2.5 */
 }
 
+.admin-bar .header__nav {
+    top: 32px;
+}
+
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: #0047ba;
 }
@@ -168,9 +172,15 @@ main {
     color: #161c2a;
 }
 
+/* WP mobile */
+@media(max-width: 782px) {
+    .admin-bar .header__nav {
+        top: 46px;
+    }
+}
+
 /* mobile */
 @media(max-width: 767px)  {
-
     #header__nav__menu {
         padding: 0;
     }
@@ -187,7 +197,6 @@ main {
         width: 2.625rem;
         height: 1.3125rem;
         background-image: url("assets/images/logo-small.svg");
-
     }
 }
 
