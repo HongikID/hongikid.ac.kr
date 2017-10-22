@@ -53,6 +53,15 @@ h4 {
     font-size: 1.875rem;
 }
 
+p, a {
+    font-size: 1rem;
+}
+
+a {
+    line-height: 1.5;
+    color: #0047ba;
+}
+
 p {
     line-height: 2.0;
 }
@@ -66,7 +75,7 @@ p {
 }
 
 main {
-    padding-top: 6rem; /* 3.5 + 2.5 */
+    padding: 6rem 0 2.5rem 0; /* 3.5 + 2.5 */
 }
 
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
@@ -113,6 +122,46 @@ main {
 .navbar-toggler-icon {
     width: 1.625rem;
     height: 1.3125rem;
+}
+
+.footer {
+    box-shadow: 0 -.0625rem 0 0 #c0c0c0;
+    padding-top: 2.25rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer__menu__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer__menu__list li {
+    margin-bottom: .375rem;
+}
+
+.footer__menu__list li:last-child {
+    margin-bottom: 0;
+}
+
+.footer__menu__list a {
+    color: #0047ba;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer__address__subject {
+    font-weight: 500;
+}
+
+.footer__address address {
+    font-size: .875rem;
+    margin-top: .75rem;
+}
+
+.footer__address a {
+    font-size: .875rem;
+    color: #161c2a;
 }
 
 /* mobile */
