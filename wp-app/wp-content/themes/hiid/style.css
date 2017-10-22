@@ -82,7 +82,11 @@ main {
     color: #0047ba;
 }
 
-.nav-item.active {
+.header__nav .navbar-nav .current-menu-parent .nav-link {
+    color: #0047ba;
+}
+
+.nav-item.active, .nav-item.current-menu-parent {
     border-bottom: 0.25rem solid #0047ba;
 }
 
@@ -171,7 +175,7 @@ main {
         padding: 0;
     }
 
-    .nav-item.active {
+    .nav-item.active, .nav-item.current-menu-parent {
         border-bottom: none;
     }
 
