@@ -181,9 +181,9 @@ main {
 
     .navbar-brand {
         position: absolute;
-        top: 50%;
+        top: 1.125rem;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0);
         width: 2.625rem;
         height: 1.3125rem;
         background-image: url("assets/images/logo-small.svg");
