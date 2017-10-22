@@ -15,3 +15,4 @@ endif;
 
 add_action( 'after_setup_theme', 'hiid_theme_setup' );
 
+require_once('bs4navwalker.php');
