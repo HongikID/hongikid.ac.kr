@@ -22,7 +22,7 @@ services:
     image: nginx:1.13
     restart: always
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - ./nginx:/etc/nginx/conf.d
       - ./wp-app:/var/www/html
