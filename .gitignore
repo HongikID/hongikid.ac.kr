@@ -4,3 +4,7 @@ wp-app/index.php
 wp-data/*
 
 !.gitkeep
+
+db.env
+wp.env
+.env
