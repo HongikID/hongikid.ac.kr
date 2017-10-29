@@ -96,9 +96,9 @@ $data = json_decode(get_the_content(), true);
                     $classes = $data['curriculum'];
                     for ($year = 1; $year <= 4; $year ++) {
                         if ($year == 1) {
-                            $className = "tab-pane fade show active";
+                            $className = "tab-pane show active";
                         } else {
-                            $className = "tab-pane fade";
+                            $className = "tab-pane";
                         }
                         print("<div class=\"${className}\" id=\"curriculum-year-${year}\" role=\"tabpanel\" aria-labelledby=\"curriculum-tab-year-${year}\">");
                     ?>
