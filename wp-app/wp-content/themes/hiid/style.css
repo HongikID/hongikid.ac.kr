@@ -211,10 +211,257 @@ p {
 
 .about__welcome__canvas {
     width: 50%;
-    height: calc(100vh + 3.5rem);
+    height: calc(100vh - 3.5rem);
     position: absolute;
     left: 50%;
     top: 100%;
+}
+
+#about__welcome__logo--dark::after {
+    content: '';
+    width: 658px;
+    height: 611px;
+    background: url("assets/images/hid-about-banner.svg") no-repeat;
+    position: absolute;
+    top: -235px;
+    left: 50%;
+}
+
+.about__about {
+    position: relative;
+}
+
+.about__section-title {
+    display: inline-block;
+    transform: translate(-50%, 0) rotate(-90deg);
+    -webkit-transform: translate(-50%, 0) rotate(-90deg);
+    font-size: .875rem;
+    letter-spacing: .2rem;
+    margin: 120px 50%;
+    text-transform: uppercase;
+}
+
+.about__section-title::before {
+    content: '<';
+    margin-right: .875rem;
+}
+
+.about__about__slogan {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #0047ba;
+}
+
+.about__about__slogan:last-child {
+    margin-top: 1.5rem;
+}
+
+.about__about__description-container {
+    border: 1px solid #c0c0c0;
+    padding: 2.5rem 1.875rem 1.5rem 1.875rem;
+}
+
+.about__about__description {
+    font-size: .875rem;
+}
+
+.about__faculty::after {
+    content: '';
+    position: absolute;
+    background: url('assets/images/hid-bg-sprite.svg') no-repeat;
+    width: 560px;
+    height: 330px;
+    right: 2px;
+    margin-top: 110px;
+}
+
+.about__faculty__philosophy {
+    background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
+    background-size: 100% 100%;
+    padding: 2.5rem 2.5rem 2.5rem 17.5%;
+    min-height: 1155px;
+}
+
+.about__faculty__philosophy__title {
+    font-size: 3.125rem;
+    line-height: 1.0;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 5.375rem;
+}
+
+.about__faculty__philosophy__thesis {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-top: 2.5rem;
+}
+
+.about__faculty__philosophy__thesis__description {
+    width: 96%;
+    color: #ffffff;
+    font-size: .875rem;
+    margin-top: 1.25rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px #ffffff solid;
+}
+
+.about__faculty__professors {
+    padding-right: 17.5%;
+
+}
+
+.about__faculty__professors__section {
+    margin-top: 40px;
+}
+
+.about__faculty__professors__section:first-child {
+    margin-top: 120px;
+}
+
+.about__faculty__professors__title {
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.about__faculty__professors__professor__list {
+    overflow: hidden;
+}
+
+.about__faculty__professors__professor {
+    float: left;
+    margin-right: 1.25rem;
+}
+
+.about__faculty__professors__professor__name {
+    margin-top: .5rem;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+.about__curriculum__main {
+    padding: 0 17.5%;
+}
+
+.about__curriculum__main__title {
+    font-size: 3.125rem;
+    letter-spacing: .5rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.about__curriculum__main__nav-item {
+    margin-right: 2rem;
+}
+
+.about__curriculum__main__nav-item:last-child {
+    margin-right: 0;
+}
+
+.about__curriculum__main__nav {
+    margin-top: 40px;
+}
+
+.about__curriculum__main__nav-link {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    line-height: 1.0;
+    padding: 0;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.about__curriculum__main__nav .about__curriculum__main__nav-item .about__curriculum__main__nav-link.active {
+    background: none;
+    border-radius: 0;
+    color: #0047ba;
+    border-bottom: 3px solid #0047ba;
+}
+
+.about__curriculum__main__classes {
+    margin-top: 46px;
+}
+
+.about__curriculum__main__classes__class {
+    padding: 12.5px;
+    border-bottom: solid 1px #9b9b9b;
+}
+
+.about__curriculum__main__classes__class__name {
+    font-size: 1.125rem;
+    line-height: 1.0;
+}
+
+.about__curriculum__main__classes__class__name::after {
+    content: '';
+    background: url("assets/images/hid-classes-arrow-up.png") no-repeat;
+    width: 16px;
+    height: 8px;
+    background-size: contain;
+    position: absolute;
+    margin-top: 6px;
+    right: 32px;
+}
+
+.about__curriculum__main__classes__class__name.collapsed::after {
+    content: '';
+    background: url("assets/images/hid-classes-arrow.png") no-repeat;
+    width: 16px;
+    height: 8px;
+    background-size: contain;
+    position: absolute;
+    margin-top: 6px;
+    right: 32px;
+}
+
+.about__curriculum__main__classes__semester {
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 2.0;
+    padding: 0 0 4px 8px;
+    border-bottom: solid 1px #161c2a;
+    margin-bottom: 0;
+}
+
+.about__curriculum__main__classes__class__description p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.about__cta {
+    margin: 90px 17.5%;
+    padding: 28px;
+    background-color: #161c2a;
+    text-align: center;
+}
+
+.about__cta h4, .about__cta a {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    line-height: 1.0;
+}
+
+.about__cta h4 {
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.about__cta a {
+    font-weight: 400;
+    letter-spacing: 3px;
 }
 
 /* WP mobile */
