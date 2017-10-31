@@ -12,6 +12,7 @@ wp-content/languages/
 wp-content/plugins/
 wp-content/upgrade/
 wp-content/themes/*
+wp-content/uploads/*
 
 !.gitkeep
 !wp-content/themes/hiid

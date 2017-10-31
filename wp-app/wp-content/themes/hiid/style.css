@@ -464,6 +464,225 @@ p {
     letter-spacing: 3px;
 }
 
+.exhibition {
+    padding-top: 3.5rem;
+}
+
+.exhibition__years {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.exhibition__years__btn {
+    display: block;
+    float: left;
+    width: 8px;
+    height: 16px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.exhibition__years__btn--prev, .exhibition__years__btn--prev:active, .exhibition__years__btn--prev:not([disabled]):not(.disabled).active, .exhibition__years__btn--prev:not([disabled]):not(.disabled):active {
+    background: url("assets/images/hid-exhibition-prev.png") no-repeat center;
+    background-size: 8px 16px;
+}
+
+.exhibition__years__btn--next, .exhibition__years__btn--next:active, .exhibition__years__btn--next:not([disabled]):not(.disabled).active, .exhibition__years__btn--next:not([disabled]):not(.disabled):active {
+    background: url("assets/images/hid-exhibition-next.png") no-repeat center;
+    background-size: 8px 16px;
+}
+
+.exhibition__years__btn.disabled {
+    cursor: none;
+    pointer-events: none;
+    background: none;
+}
+
+.exhibition__years__current-year {
+    float: left;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    margin: 5px 120px;
+}
+
+.exhibition__title {
+    margin: 100px 0 0 0;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.875rem;
+}
+
+.exhibition__poster {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.exhibition__summary {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.exhibition__description-btn {
+    margin: 20px auto;
+    color: #161c2a;
+    display: block;
+}
+
+.exhibition__description-btn:hover {
+    color: #161c2a;
+    text-decoration: underline;
+}
+
+.exhibition__description-btn::after {
+    content: '';
+    background: url("assets/images/hid-exhibition-next.png") no-repeat;
+    position: absolute;
+    width: 7px;
+    height: 14px;
+    background-size: 7px 14px;
+    margin-top: 6px;
+    margin-left: 9px;
+}
+
+.exhibition__description__title {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.exhibition__description__content {
+    padding: 54px 60px 50px 50px;
+}
+
+.exhibition__description__header {
+    border: none;
+}
+
+.exhibition__description__header .close {
+    font-size: 2rem;
+    padding: 10px;
+    margin: -10px -10px -10px auto;
+}
+
+.exhibition__description__body {
+    margin-top: 48px;
+}
+
+.exhibition__description__body__subject {
+    font-size: .875rem;
+    margin-bottom: 16px;
+}
+
+.exhibition__description__body p {
+    font-size: .875rem;
+}
+
+.exhibition__description__footer {
+    border: none;
+    justify-content: flex-start;
+}
+
+.exhibition__description__footer p, .exhibition__description__footer__paragraph {
+    font-size: .875rem;
+    font-weight: 700;
+}
+
+.exhibition__filter {
+    width: 70%;
+    padding: 0;
+    margin: 40px auto 67px auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.exhibition__filter__item {
+    width: 100%;
+    text-align: center;
+    border-left: 1px solid #161c2a;
+    border-top: 1px solid #161c2a;
+    border-bottom: 1px solid #161c2a;
+    padding: 4px 0 6px 0;
+}
+
+.exhibition__filter__item:last-child {
+    border-right: 1px solid #161c2a;
+}
+
+.exhibition__filter__item-link {
+    font-size: 1.125rem;
+    color: #000000;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.exhibition__filter__item-link.active {
+    text-decoration: underline;
+}
+
+.exhibition__filter__item-link:hover {
+    color: #000000;
+}
+
+.exhibition__contents {
+    padding-bottom: 90px;
+}
+
+.exhibition__section {
+    margin-top: 40px;
+}
+
+.exhibition__section--hidden {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.exhibition__section__title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.exhibition__section__work {
+    border: none;
+    border-radius: 0;
+}
+
+.exhibition__section__work__body {
+    padding: .75rem 0 0 0;
+}
+
+.exhibition__section__work__title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #161c2a;
+}
+
+.exhibition__section__work__title:hover {
+    color: inherit;
+}
+
+.exhibition__section__work__designers {
+    font-size: .875rem;
+    line-height: 1.0;
+}
+
 /* WP mobile */
 @media(max-width: 782px) {
     .admin-bar .header__nav {
