@@ -683,6 +683,175 @@ p {
     line-height: 1.0;
 }
 
+.work {
+    padding-top: 3.5rem;
+}
+
+.work__header {
+    margin-top: 2.5rem;
+}
+
+.work__header__link::before {
+    content: '';
+    background: url("assets/images/hid-exhibition-prev.png");
+    background-size: 8px 16px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    margin: 4px 12px 4px 0;
+    float: left;
+}
+
+.work__header__link {
+    display: block;
+    font-size: 1.125rem;
+    line-height: 1.33;
+    font-family: 'Lato', sans-serif;
+    color: #9b9b9b;
+    text-transform: uppercase;
+}
+
+.work__header__link:hover {
+    color: #9b9b9b;
+}
+
+.work__body {
+    margin: 40px 0 0 0;
+    padding: 0 6px 0 0;
+}
+
+.work__title {
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-weight: bold;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+    line-height: 0.83;
+    margin-bottom: 50px;
+}
+
+.work__subject {
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-weight: 300;
+    font-size: 1.875rem;
+    line-height: 1.33;
+    margin-bottom: 30px;
+}
+
+.work__description {
+    font-size: .875rem;
+    margin-bottom: 24px;
+}
+
+.work__designers {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+.work__designers__item {
+    float: left;
+    margin-right: 30px;
+}
+
+.work__designers__item:last-child {
+    margin-right: 0;
+}
+
+.work__gallery {
+    padding: 0 0 0 6px;
+}
+
+.work__gallery__image {
+    width: 100%;
+}
+
+.work__gallery__image--main {
+    margin-bottom: 10px;
+}
+
+.work__gallery__image--additional {
+    height: 150px;
+}
+
+.work__gallery__images {
+    padding: 0 10px;
+}
+
+.work__gallery__image__wrapper {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.work__footer {
+    margin: 90px 0;
+}
+
+.work__footer__wrapper {
+    position: relative;
+}
+
+.work__footer__wrapper--prev {
+    text-align: left;
+}
+
+.work__footer__wrapper--next {
+    text-align: right;
+}
+
+.work__footer__link {
+    position: relative;
+    font-size: 1.125rem;
+    line-height: 1.33;
+    font-family: 'Lato', sans-serif;
+    color: #9b9b9b;
+    text-transform: uppercase;
+}
+
+.work__footer__link:hover {
+    color: #9b9b9b;
+}
+
+.work__footer__link--prev::before {
+    content: '';
+    background: url("assets/images/hid-exhibition-prev.png");
+    background-size: 8px 16px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    margin: 4px 12px 4px 0;
+    float: left;
+}
+
+.work__footer__link--next::after {
+    content: '';
+    background: url("assets/images/hid-exhibition-next.png");
+    background-size: 8px 16px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    margin: 4px 0 4px 12px;
+    float: right;
+}
+
+.work__footer__link > img {
+    visibility: hidden;
+    position: absolute;
+    margin-top: -130px;
+    z-index: 10000;
+}
+
+.work__footer__link--prev > img {
+    left: 9rem;
+}
+
+.work__footer__link--next > img {
+    right: 6rem;
+}
+
+.work__footer__link:hover > img {
+    visibility: visible;
+}
+
 /* WP mobile */
 @media(max-width: 782px) {
     .admin-bar .header__nav {

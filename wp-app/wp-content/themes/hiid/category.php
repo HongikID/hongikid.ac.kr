@@ -144,7 +144,7 @@ $title = str_replace("</p>", "", $title);
             }
 
             section.append('<div class="exhibition__section__work card col-sm-4 col-xs-12">\n' +
-                '<img class="exhibition__section__work__image card-img-top" src="' + work.gallery.images[0] + '" alt="' + work.title + '">\n' +
+                '<a href="'+ url +'"><img class="exhibition__section__work__image card-img-top" src="' + work.main_image + '" alt="' + work.title + '"></a>\n' +
                 '<div class="exhibition__section__work__body card-body">\n' +
                 '<h5 class="card-title"><a class="exhibition__section__work__title" href="' + url + '">' + work.title + '</a></h5>\n' +
                 '<p class="exhibition__section__work__designers card-text">' + work.designers.join(', ') + '</p>\n' +
