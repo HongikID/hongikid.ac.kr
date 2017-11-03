@@ -1012,6 +1012,73 @@ p {
     letter-spacing: -.025rem;
 }
 
+.contact {
+    margin-top: 3.5rem;
+    padding: 40px 0 90px 0;
+}
+
+.contact__office__title, .contact__admission__title {
+    font-size: 1.875rem;
+    letter-spacing: .3625rem;
+    color: #0047ba;
+    text-transform: uppercase;
+    margin: 0 0 40px 0;
+}
+
+.contact__office__list dt, .contact__admission__list dt {
+    font-family: 'Lato', sans-serif;
+    font-size: .875rem;
+    line-height: 1.0;
+    letter-spacing: .05625rem;
+    color: #0047ba;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.contact__office__list dd, .contact__office__list dd a, .contact__admission__list dd, .contact__admission__list dd a {
+    font-size: .875rem;
+    line-height: 1.0;
+    text-align: left;
+}
+
+.contact__office__list__item, .contact__admission__list__item {
+    margin-bottom: 22px;
+}
+
+.contact__office__list__item:last-child, .contact__admission__list__item:last-child {
+    margin-bottom: 0;
+}
+
+.contact__admission__title {
+    margin-top: 90px;
+}
+
+.contact__admission__subject {
+    margin: 0 0 24px 0;
+    font-family: 'Noto Sans Korean', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.0;
+}
+
+.contact__admission__link {
+    margin-top: 24px;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 2.0;
+    color: #0047ba;
+}
+
+.contact__admission__link::after {
+    position: absolute;
+    content: '';
+    background: url("assets/images/hid-contact-arrow.png");
+    background-size: 8px 16px;
+    width: 8px;
+    height: 16px;
+    margin: 7px 0 0 8px;
+}
+
 /* WP mobile */
 @media(max-width: 782px) {
     .admin-bar .header__nav {
