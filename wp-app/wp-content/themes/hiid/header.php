@@ -35,7 +35,7 @@
         );
         ?>
     </nav>
-
+    <div class="header__nav--fake"></div>
 </header>
 
 <main>
