@@ -281,7 +281,7 @@ p {
 .about__faculty__philosophy {
     background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
     background-size: 100% 100%;
-    padding: 2.5rem 2.5rem 2.5rem 17.5%;
+    padding: 2.5rem 2.5rem 2.5rem 14.75%;
     min-height: 1155px;
 }
 
@@ -311,7 +311,7 @@ p {
 }
 
 .about__faculty__professors {
-    padding-right: 17.5%;
+    padding-right: 14.75%;
 
 }
 
@@ -348,7 +348,7 @@ p {
 }
 
 .about__curriculum__main {
-    padding: 0 17.5%;
+    padding: 0 14.75%;
 }
 
 .about__curriculum__main__title {
@@ -439,7 +439,7 @@ p {
 }
 
 .about__cta {
-    margin: 90px 17.5%;
+    margin: 90px 14.75%;
     padding: 28px;
     background-color: #161c2a;
     text-align: center;
