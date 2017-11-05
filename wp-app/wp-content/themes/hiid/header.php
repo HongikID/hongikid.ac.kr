@@ -15,7 +15,7 @@
 
 <header>
     <nav class="header__nav navbar fixed-top navbar-expand-md navbar-light">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle Navigation">
+        <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle Navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <a href="/"><span class="navbar-brand"></span></a>

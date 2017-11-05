@@ -121,20 +121,26 @@ p {
 
 .navbar-light .navbar-toggler {
     border: none;
-    padding: 1.0625rem 1.125rem;
+    padding: .8125rem 1.125rem;
 }
 
 .navbar-nav .nav-link {
     padding: .8125rem .5rem;
 }
 
-.navbar-light .navbar-toggler-icon {
+.navbar-light .collapsed .navbar-toggler-icon {
     background-image: url("assets/images/menu-toggler.svg");
+    background-size: 1.875rem 1.875rem;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("assets/images/menu-back.svg");
+    background-size: 1.875rem 1.875rem;
 }
 
 .navbar-toggler-icon {
-    width: 1.625rem;
-    height: 1.3125rem;
+    width: 1.875rem;
+    height: 1.875rem;
 }
 
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
@@ -342,13 +348,17 @@ p {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
     border-bottom: 1px solid #0047ba;
-    /* text-decoration: underline; */
+    line-height: 1.45;
+    margin: 0;
+}
+
+.about__about__slogan--last {
+    margin: 40px 0 63px 0;
 }
 
 .about__about__slogan:last-child {
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
 }
 
 .about__about__description-container {
@@ -474,6 +484,7 @@ p {
 .about__curriculum__main__nav-item {
     margin-left: 1rem;
     margin-right: 1rem;
+    display: inline;
 }
 
 .about__curriculum__main__nav-item:last-child {
@@ -481,21 +492,21 @@ p {
 }
 
 .about__curriculum__main__nav {
-    overflow: hidden;
-    /* display: inline-flex; */
+    /* overflow: scroll; */
+    /* display: inline-block; */
     margin-top: 40px;
     /* justify-content: space-around; */
 }
 
 .about__curriculum__main__nav-link {
     font-family: 'Lato', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.125rem;
     letter-spacing: 1px;
     line-height: 1.0;
     padding: 0;
     text-transform: uppercase;
-    color: #4a4a4a;
+    color: #9b9b9b;
 }
 
 .about__curriculum__main__nav .about__curriculum__main__nav-item .about__curriculum__main__nav-link.active {
@@ -828,7 +839,7 @@ p {
 
 .exhibition__filter__item-link {
     font-size: 1.125rem;
-    color: #000000;
+    color: #cacaca;
     letter-spacing: 2px;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
@@ -836,11 +847,13 @@ p {
 }
 
 .exhibition__filter__item-link.active {
-    text-decoration: underline;
+    color: #000000;
+    /* text-decoration: underline; */
 }
 
 .exhibition__filter__item-link:hover {
     color: #000000;
+    text-decoration: none;
 }
 
 .exhibition__contents {
@@ -863,7 +876,7 @@ p {
 .exhibition__section__title {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 0;
@@ -876,7 +889,11 @@ p {
 }
 
 .exhibition__section__work__body {
-    padding: .75rem 0 0 0;
+    padding: .375rem 0 0 0;
+}
+
+.exhibition__section__work__title-wrapper {
+    margin-bottom: 6px;
 }
 
 .exhibition__section__work__title {
@@ -892,6 +909,23 @@ p {
 .exhibition__section__work__designers, .exhibition__section__work__designers a {
     font-size: .875rem;
     line-height: 1.0;
+}
+
+.exhibition__section__work__image-wrapper {
+    overflow: hidden;
+}
+
+.exhibition__section__work__image {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    border-radius: 0;
+}
+
+a:hover .exhibition__section__work__image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .work {
@@ -1297,6 +1331,11 @@ p {
     margin: 7px 0 0 8px;
 }
 
+.about__curriculum__main__classes .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 /* WP mobile */
 @media(max-width: 782px) {
     .admin-bar .header__nav {
@@ -1323,10 +1362,11 @@ p {
     .dropdown-menu .dropdown-item {
         text-align: left;
         padding: 6px;
+        /* text-align: left; */
     }
 
     #header__nav__menu {
-        padding: 0;
+        padding: 0 15px;
     }
 
     .nav-item.active, .nav-item.current-menu-parent {
@@ -1343,8 +1383,21 @@ p {
         background-image: url("assets/images/logo-small.svg");
     }
 
+    .navbar-nav .nav-link {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header__nav .dropdown-menu {
+        padding: 6px 0;
+    }
+
+    .header__nav .dropdown-menu .dropdown-item {
+        text-align: left;
+    }
+
     .footer {
-        padding: 30px 30px 40px 30px;
+        padding: 30px 0 40px 0;
     }
 
     .footer__address {
@@ -1354,7 +1407,8 @@ p {
     .about__faculty__philosophy {
         min-height: 0;
         padding-bottom: 120px;
-        padding-left: 10%;
+        padding-left: 15px;
+        padding-right: 0;
     }
 
     .about__about__slogan {
@@ -1363,6 +1417,10 @@ p {
 
     .about__faculty__wrapper {
         background: none;
+    }
+
+    .about__faculty__philosophy__wrapper {
+        /* padding: 0 30px; */
     }
 
     .about__faculty__wrapper .container {
@@ -1379,6 +1437,19 @@ p {
 
     .about__curriculum__main__title {
         font-size: 2.5rem;
+    }
+
+    .about__curriculum__main__nav {
+        display: inline-block;
+        margin-top: 20px;
+    }
+
+    .about__curriculum__main__classes__wrapper:last-child {
+        margin-top: 24px;
+    }
+
+    .about__curriculum__main__classes {
+        margin-top: 30px;
     }
 
     .alumni__header {

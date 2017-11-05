@@ -24,7 +24,7 @@ $data = json_decode(get_the_content(), true);
                         <h3 class="about__about__slogan accent">Trans Humanism</h3>
                     </div>
                     <div>
-                        <h3 class="about__about__slogan accent">Designnovation</h3>
+                        <h3 class="about__about__slogan about__about__slogan--last accent">Designnovation</h3>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-6">
@@ -73,7 +73,7 @@ $data = json_decode(get_the_content(), true);
                                     <?php
                                     foreach ($facultySection["professors"] as $professor) {
                                     ?>
-                                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 about__faculty__professors__professor">
+                                        <div class="col-6 col-sm-6 col-md-4 col-lg-4 col-xl-4 about__faculty__professors__professor">
                                             <img class="about__faculty__professors__professor__image" src="<?php echo $professor['image_url'] ?>" alt="<?php echo $professor['name'] ?> 교수 프로필 사진">
                                             <h5 class="about__faculty__professors__professor__name"><?php echo $professor['name'] ?></h5>
                                         </div>
@@ -130,7 +130,7 @@ $data = json_decode(get_the_content(), true);
                             for ($sem = 1; $sem <= 2; $sem ++) {
 
                             ?>
-                            <div class="col-sm-6">
+                            <div class="about__curriculum__main__classes__wrapper col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                                 <h5 class="about__curriculum__main__classes__semester"><?php echo "${sem}학기"?></h5>
                                 <div class="about__curriculum__main__classes__accordion" id="<?php echo "about__curriculum__main__classes__accordion-${year}-${sem}"?>" data-children=".item">
                                         <?php

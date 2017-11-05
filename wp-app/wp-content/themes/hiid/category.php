@@ -180,9 +180,9 @@ $title = str_replace("</p>", "", $title);
             }
 
             section.append('<div class="exhibition__section__work card col-sm-4 col-xs-12">\n' +
-                '<a href="'+ url +'"><img class="exhibition__section__work__image card-img-top" src="' + work.main_image + '" alt="' + work.title + '"></a>\n' +
+                '<a href="'+ url +'"><div class="exhibition__section__work__image-wrapper"><img class="exhibition__section__work__image card-img-top" src="' + work.main_image + '" alt="' + work.title + '"></div></a>\n' +
                 '<div class="exhibition__section__work__body card-body">\n' +
-                '<h5 class="card-title"><a class="exhibition__section__work__title" href="' + url + '">' + work.title + '</a></h5>\n' +
+                '<h5 class="exhibition__section__work__title-wrapper card-title"><a class="exhibition__section__work__title" href="' + url + '">' + work.title + '</a></h5>\n' +
                 '<p class="exhibition__section__work__designers card-text">' + printDesigner(work.designers) + '</p>\n' +
                 '</div>\n' +
                 '</div>'
