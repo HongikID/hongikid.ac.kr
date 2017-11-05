@@ -80,6 +80,14 @@ p {
     top: 32px;
 }
 
+.admin-bar .header__nav--fake {
+    top: 86px;
+}
+
+.admin-bar .header__nav .dropdown-menu-wrapper {
+    top: 89px
+}
+
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: #0047ba;
 }
@@ -1292,6 +1300,10 @@ p {
 @media(max-width: 782px) {
     .admin-bar .header__nav {
         top: 46px;
+    }
+
+    .admin-bar .header__nav--fake {
+        top: 100px;
     }
 }
 
