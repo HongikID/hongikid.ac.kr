@@ -174,8 +174,8 @@ p {
     border: none;
     border-radius: 0;
     margin: 0;
-    padding: 16px 0 14px 0;
-    top: calc(100% + 4px);
+    padding: 10px 0 10px 0;
+    top: 100%;
 }
 
 .header__nav .dropdown-menu-wrapper {
@@ -909,6 +909,7 @@ p {
 
 .exhibition__section__work__title:hover {
     color: inherit;
+    text-decoration: none;
 }
 
 .exhibition__section__work__designers, .exhibition__section__work__designers a {
@@ -944,7 +945,7 @@ a:hover .exhibition__section__work__image {
 
 .work__header__link::before {
     content: '';
-    background: url("assets/images/hid-exhibition-prev.png");
+    background: url("assets/images/hid-grey-arrow-prev.png");
     background-size: 8px 16px;
     display: block;
     width: 8px;
@@ -964,6 +965,7 @@ a:hover .exhibition__section__work__image {
 
 .work__header__link:hover {
     color: #9b9b9b;
+    text-decoration: none;
 }
 
 .work__body {
@@ -976,7 +978,7 @@ a:hover .exhibition__section__work__image {
     font-weight: bold;
     font-size: 2.25rem;
     letter-spacing: 1px;
-    line-height: 0.83;
+    line-height: 1.4;
     margin-bottom: 50px;
 }
 
@@ -1067,11 +1069,12 @@ a:hover .exhibition__section__work__image {
 
 .work__footer__link:hover {
     color: #9b9b9b;
+    text-decoration: none;
 }
 
 .work__footer__link--prev::before {
     content: '';
-    background: url("assets/images/hid-exhibition-prev.png");
+    background: url("assets/images/hid-grey-arrow-prev.png");
     background-size: 8px 16px;
     display: block;
     width: 8px;
@@ -1082,7 +1085,7 @@ a:hover .exhibition__section__work__image {
 
 .work__footer__link--next::after {
     content: '';
-    background: url("assets/images/hid-exhibition-next.png");
+    background: url("assets/images/hid-grey-arrow-next.png");
     background-size: 8px 16px;
     display: block;
     width: 8px;
