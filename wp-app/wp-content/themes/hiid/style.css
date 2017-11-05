@@ -382,7 +382,7 @@ p {
 .about__faculty::after {
     content: url('assets/images/hid-bg-sprite.svg');
     max-width: 100vw;
-    width: 560px;
+    width: 610px;
     /* height: 330px; */
     position: absolute;
     right: 2px;
@@ -477,6 +477,7 @@ p {
 
 .about__curriculum__main {
     /* padding: 0; */
+    margin-top: 169px;
 }
 
 .about__curriculum__main__title {
@@ -1435,6 +1436,16 @@ a:hover .exhibition__section__work__image {
 
     .about__about__slogan {
         font-size: 1.875rem;
+    }
+
+    .about__faculty::after {
+        content: url('assets/images/hid-bg-sprite.svg');
+        max-width: 100vw;
+        width: 230px;
+        position: absolute;
+        right: 2px;
+        margin-top: 110px;
+        overflow-x: hidden;
     }
 
     .about__faculty__wrapper {
