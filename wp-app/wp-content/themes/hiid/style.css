@@ -895,7 +895,7 @@ p {
 
 .work {
     padding-top: 3.5rem;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .work__header {
