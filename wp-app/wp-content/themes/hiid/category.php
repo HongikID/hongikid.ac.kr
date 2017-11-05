@@ -74,7 +74,7 @@ $title = str_replace("</p>", "", $title);
                 </div>
 
                 <div class="exhibition__description__footer modal-footer">
-                    <p class="exhibition__description__footer__paragraph"><?php echo $data[4]; ?></p>
+                    <p class="exhibition__description__footer__paragraph"><?php echo "解題 : ${data[4]} 교수"; ?></p>
                 </div>
             </div>
         </div>
