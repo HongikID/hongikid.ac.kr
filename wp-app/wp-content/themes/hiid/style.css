@@ -367,15 +367,20 @@ p {
     overflow-x: hidden;
 }
 
+.about__faculty__wrapper {
+    background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
+    background-size: 50% 100%;
+}
+
 .about__faculty__philosophy {
+    padding: 2.5rem 2.5rem 2.5rem 0;
     background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
     background-size: 100% 100%;
-    padding: 2.5rem;
-    min-height: 1155px;
+    /*min-height: 1155px;*/
 }
 
 .about__faculty__philosophy__wrapper {
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
 }
 
 .about__faculty__philosophy__title {
@@ -1329,6 +1334,14 @@ p {
 
     .about__about__slogan {
         font-size: 1.875rem;
+    }
+
+    .about__faculty__wrapper {
+        background: none;
+    }
+
+    .about__faculty__wrapper .container {
+        max-width: none;
     }
 
     .about__faculty__professors__section:first-child {

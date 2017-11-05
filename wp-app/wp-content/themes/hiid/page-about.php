@@ -37,53 +37,57 @@ $data = json_decode(get_the_content(), true);
         </div>
     </section>
 
-    <section class="about__faculty container-fluid">
+    <section class="about__faculty">
         <h2 class="about__section-title about__faculty__title">Faculty</h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 about__faculty__philosophy">
-                <div class="about__faculty__philosophy__wrapper container">
-                    <h3 class="about__faculty__philosophy__title">Faculty</h3>
+        <div class="about__faculty__wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 about__faculty__philosophy">
+                        <div class="about__faculty__philosophy__wrapper container">
+                            <h3 class="about__faculty__philosophy__title">Faculty</h3>
 
-                    <h4 class="about__faculty__philosophy__thesis">줄탁동시</h4>
-                    <p class="about__faculty__philosophy__thesis__description">
-                        - ‘줄’과 '탁'이 동시에 이루어진다.
-                        병아리가 알에서 나오기 위해서는 새끼와 어미 닭이 안팎에 서로쪼아야 한다.
-                        <br><br>
-                        - 기회와 인연이 서로 투합한다.
-                        독일 문학가, 헤르만 헤세는 '알에서 깨어나려면 한 세계를 파괴하지 않으면 안된다'고 했으며 이는 곧 '창조적 파괴'를 은유하는 바, 스승과 제자가 함께 구습타파하여 새로운 세계를 창조한다.
-                    </p>
+                            <h4 class="about__faculty__philosophy__thesis">줄탁동시</h4>
+                            <p class="about__faculty__philosophy__thesis__description">
+                                - ‘줄’과 '탁'이 동시에 이루어진다.
+                                병아리가 알에서 나오기 위해서는 새끼와 어미 닭이 안팎에 서로쪼아야 한다.
+                                <br><br>
+                                - 기회와 인연이 서로 투합한다.
+                                독일 문학가, 헤르만 헤세는 '알에서 깨어나려면 한 세계를 파괴하지 않으면 안된다'고 했으며 이는 곧 '창조적 파괴'를 은유하는 바, 스승과 제자가 함께 구습타파하여 새로운 세계를 창조한다.
+                            </p>
 
-                    <h4 class="about__faculty__philosophy__thesis">교학상장</h4>
-                    <p class="about__faculty__philosophy__thesis__description">
-                        스승과 제자간에 상호 배움을 통해 성장한다.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 about__faculty__professors container">
-                <?php
-                    $facultySections = $data["faculties"];
-                    foreach ($facultySections as $facultySection) {
-                    ?>
-                    <div class="about__faculty__professors__section">
-                        <h4 class="about__faculty__professors__title"><?php echo $facultySection['name'] ?></h4>
-                        <div class="about__faculty__professors__professor__list">
-                            <div class="row">
-                            <?php
-                            foreach ($facultySection["professors"] as $professor) {
-                            ?>
-                                <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 about__faculty__professors__professor">
-                                    <img class="about__faculty__professors__professor__image" src="<?php echo $professor['image_url'] ?>" alt="<?php echo $professor['name'] ?> 교수 프로필 사진">
-                                    <h5 class="about__faculty__professors__professor__name"><?php echo $professor['name'] ?></h5>
-                                </div>
-                            <?php
-                            }
-                            ?>
-                            </div>
+                            <h4 class="about__faculty__philosophy__thesis">교학상장</h4>
+                            <p class="about__faculty__philosophy__thesis__description">
+                                스승과 제자간에 상호 배움을 통해 성장한다.
+                            </p>
                         </div>
                     </div>
-                <?php
-                    }
-                ?>
+                    <div class="col-sm-12 col-md-6 about__faculty__professors container">
+                        <?php
+                            $facultySections = $data["faculties"];
+                            foreach ($facultySections as $facultySection) {
+                            ?>
+                            <div class="about__faculty__professors__section">
+                                <h4 class="about__faculty__professors__title"><?php echo $facultySection['name'] ?></h4>
+                                <div class="about__faculty__professors__professor__list">
+                                    <div class="row">
+                                    <?php
+                                    foreach ($facultySection["professors"] as $professor) {
+                                    ?>
+                                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 about__faculty__professors__professor">
+                                            <img class="about__faculty__professors__professor__image" src="<?php echo $professor['image_url'] ?>" alt="<?php echo $professor['name'] ?> 교수 프로필 사진">
+                                            <h5 class="about__faculty__professors__professor__name"><?php echo $professor['name'] ?></h5>
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php
+                            }
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
