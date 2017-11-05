@@ -2,12 +2,14 @@
 get_header();
 
 the_post();
+$currentPostId = get_the_ID();
 $data = json_decode(get_the_content(), true);
 ?>
 <div class="work container">
     <div class="work__header">
         <?php
-            $exhibitionSlug = get_the_category()[0]->slug;
+            $currentCat = get_the_category()[0];
+            $exhibitionSlug = $currentCat->slug;
             $exhibitionUrl = "/exhibitions/${exhibitionSlug}";
         ?>
         <a href="<?php echo $exhibitionUrl ?>" class="work__header__link"><?php echo $data['category']?></a>
@@ -72,10 +74,33 @@ $data = json_decode(get_the_content(), true);
             </div>
         </div>
     </article>
+    <?php
+        $query = new WP_Query( array( 'cat' => $currentCat->term_id, 'posts_per_page' => -1) );
+
+        function getId($p) {
+            return $p->ID;
+        }
+
+        $posts = $query->posts;
+        $postIds = array_map("getId", $posts);
+
+        $currentIndex = array_search($currentPostId, $postIds);
+
+        if ($currentIndex - 1 >= 0) {
+            $prev_post = $posts[$currentIndex - 1];
+        } else {
+            $prev_post = null;
+        }
+
+        if ($currentIndex + 1 < count($posts)) {
+            $next_post = $posts[$currentIndex + 1];
+        } else {
+            $next_post = null;
+        }
+    ?>
     <div class="work__footer row">
         <div class="work__footer__wrapper work__footer__wrapper--prev col-6">
         <?php
-        $prev_post = get_previous_post(true);
         if (!empty($prev_post)) {
             $prev_content = $prev_post->post_content;
             $prev_data = json_decode($prev_content, true);
@@ -95,7 +120,6 @@ $data = json_decode(get_the_content(), true);
 
         <div class="work__footer__wrapper work__footer__wrapper--next col-6">
         <?php
-        $next_post = get_next_post(true);
         if (!empty($next_post)) {
             $next_content = $next_post->post_content;
             $next_data = json_decode($next_content, true);
