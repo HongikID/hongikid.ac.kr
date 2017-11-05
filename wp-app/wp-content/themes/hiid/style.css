@@ -317,12 +317,13 @@ p {
 #about__welcome__logo--dark::after {
     max-width: 50vw;
     content: '';
-    width: 658px;
-    height: 611px;
+    width: 797px;
+    height: 676px;
     background: url("assets/images/hid-about-banner.svg") no-repeat;
     position: absolute;
-    top: -235px;
+    top: -228px;
     left: 50%;
+    opacity: .56;
 }
 
 .about__about {
