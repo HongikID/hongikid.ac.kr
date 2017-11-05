@@ -46,7 +46,7 @@ $data = json_decode(get_the_content(), true);
                             <div class="col-3 col-md-2">
                                 <span class="alumni__member__name"><?php echo $member['name'] ?></span>
                             </div>
-                            <div class="col-7 col-md-9">
+                            <div class="col-7 col-md-9 alumni__member__summary__wrapper">
                                 <span class="alumni__member__summary"><?php echo $member['summary'] ?>, <?php echo $member['nation'] ?></span>
                             </div>
                             <div class="col-2 col-md-1">
@@ -60,10 +60,10 @@ $data = json_decode(get_the_content(), true);
                                 foreach ($member['positions'] as $position) {
                             ?>
                             <li class="alumni__member__position row">
-                                <div class="col-sm-2">
+                                <div class="col-12 offset-sm-2 col-sm-2">
                                     <span class="alumni__member__position__label"><?php echo $position['range'] ?></span>
                                 </div>
-                                <div class="col-sm-10">
+                                <div class="col-12 col-sm-8">
                                     <span class="alumni__member__position__description"><?php echo $position['position'] ?></span>
                                 </div>
                             </li>

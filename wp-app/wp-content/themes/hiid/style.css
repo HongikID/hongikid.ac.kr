@@ -1242,6 +1242,10 @@ a:hover .exhibition__section__work__image {
     letter-spacing: -.025rem;
 }
 
+.alumni__member__summary__wrapper {
+    padding-left: 9px;
+}
+
 .alumni__member__toggle {
     display: block;
     background-image: url("assets/images/hid-classes-arrow.png");
@@ -1262,7 +1266,8 @@ a:hover .exhibition__section__work__image {
     font-size: .875rem;
     line-height: 1.17;
     letter-spacing: -.025rem;
-    color: #0047ba;
+    /* color: #0047ba; */
+    font-weight: 400;
 }
 
 .alumni__member__position__description {
