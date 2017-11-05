@@ -130,12 +130,12 @@ p {
 }
 
 .navbar-light .collapsed .navbar-toggler-icon {
-    background-image: url("assets/images/menu-toggler.svg");
+    background: url("assets/images/menu-toggler.svg");
     background-size: 1.875rem 1.875rem;
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("assets/images/menu-back.svg");
+    background: url("assets/images/menu-back.svg");
     background-size: 1.875rem 1.875rem;
 }
 
@@ -1255,7 +1255,7 @@ a:hover .exhibition__section__work__image {
 
 .alumni__member__toggle {
     display: block;
-    background-image: url("assets/images/hid-classes-arrow.png");
+    background: url("assets/images/hid-classes-arrow.png");
     background-size: 16px 8px;
     width: 16px;
     height: 8px;
@@ -1404,7 +1404,7 @@ a:hover .exhibition__section__work__image {
         transform: translate(-50%, 0);
         width: 2.625rem;
         height: 1.3125rem;
-        background-image: url("assets/images/logo-small.svg");
+        background: url("assets/images/logo-small.svg");
     }
 
     .navbar-nav .nav-link {
