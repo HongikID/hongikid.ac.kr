@@ -70,12 +70,11 @@ $title = str_replace("</p>", "", $title);
                 </div>
 
                 <div class="exhibition__description__body modal-body">
-                    <h5 class="exhibition__description__body__subject"><?php echo $data[3]; ?></h5>
-                    <p class="exhibition__description__body__paragraph"><?php echo $data[4]; ?></p>
+                    <p class="exhibition__description__body__paragraph"><?php echo $data[3]; ?></p>
                 </div>
 
                 <div class="exhibition__description__footer modal-footer">
-                    <p class="exhibition__description__footer__paragraph"><?php echo $data[5]; ?></p>
+                    <p class="exhibition__description__footer__paragraph"><?php echo $data[4]; ?></p>
                 </div>
             </div>
         </div>

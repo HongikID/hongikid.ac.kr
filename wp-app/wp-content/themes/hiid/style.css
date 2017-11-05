@@ -651,6 +651,10 @@ p {
     text-align: center;
 }
 
+#exhibition-description {
+    z-index: 2000;
+}
+
 .exhibition__description-btn {
     margin: 20px auto;
     color: #161c2a;
