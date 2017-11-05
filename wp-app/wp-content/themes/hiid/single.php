@@ -16,12 +16,35 @@ $data = json_decode(get_the_content(), true);
         <div class="col-12 col-sm-12 col-md-6">
             <h1 class="work__title"><?php echo $data['title']?></h1>
             <h2 class="work__subject"><?php echo $data['subject']?></h2>
-            <p class="work__description"><?php echo $data['description']?></p>
+            <p class="work__description work__description--ko"><?php echo $data['description_ko']?></p>
+            <p class="work__description work__description--en"><?php echo $data['description_en']?></p>
             <ul class="work__designers">
                 <?php
                     foreach ($data['designers'] as $designer) {
                 ?>
-                <li class="work__designers__item"><?php echo $designer ?></li>
+                <li class="work__designers__item">
+                    <?php
+                        if ($designer['profile_url']) {
+                            $designerUrl = $designer['profile_url'];
+                            if (strpos($designerUrl, '@') !== false) {
+                                $designerUrl = 'mailto:' . $designerUrl;
+                            }
+                    ?>
+                        <a href="<?php echo $designerUrl ?>">
+                    <?php
+                        }
+                    ?>
+
+                    <?php echo $designer['name'] ?>
+
+                    <?php
+                    if ($designer['profile_url']) {
+                    ?>
+                        </a>
+                    <?php
+                    }
+                    ?>
+                </li>
                 <?php
                     }
                 ?>

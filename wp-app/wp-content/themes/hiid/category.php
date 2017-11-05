@@ -124,11 +124,34 @@ $title = str_replace("</p>", "", $title);
     </div>
 </div>
 
+
+
 <script>
+    function printDesigner(designers) {
+        var output = [];
+        for (var idx in designers) {
+            var d = designers[idx];
+            if (d['profile_url'] !== null && d['profile_url'] !== undefined) {
+                var profile_url = d['profile_url'];
+                if (profile_url.includes("@")) {
+                    profile_url = "mailto:" + profile_url;
+                }
+                output.push("<a href=\"" + profile_url + "\">" + d['name'] + "</a>");
+            } else {
+                output.push(d['name']);
+            }
+        }
+        return output.join(', ');
+    }
+
     $(document).ready(function () {
         var data = [
             <?php
-            while (have_posts()) : the_post();
+
+            $query = new WP_Query( array( 'cat' => $currentCategoryId, 'posts_per_page' => -1) );
+
+            while ($query -> have_posts()): $query -> the_post();
+
                 $content = get_the_content();
                 $link = get_permalink();
 
@@ -161,7 +184,7 @@ $title = str_replace("</p>", "", $title);
                 '<a href="'+ url +'"><img class="exhibition__section__work__image card-img-top" src="' + work.main_image + '" alt="' + work.title + '"></a>\n' +
                 '<div class="exhibition__section__work__body card-body">\n' +
                 '<h5 class="card-title"><a class="exhibition__section__work__title" href="' + url + '">' + work.title + '</a></h5>\n' +
-                '<p class="exhibition__section__work__designers card-text">' + work.designers.join(', ') + '</p>\n' +
+                '<p class="exhibition__section__work__designers card-text">' + printDesigner(work.designers) + '</p>\n' +
                 '</div>\n' +
                 '</div>'
             );

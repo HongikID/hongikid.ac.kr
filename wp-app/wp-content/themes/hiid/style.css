@@ -853,12 +853,13 @@ p {
     font-size: 1.125rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .exhibition__section__work {
     border: none;
     border-radius: 0;
+    margin-top: 30px;
 }
 
 .exhibition__section__work__body {
@@ -875,7 +876,7 @@ p {
     color: inherit;
 }
 
-.exhibition__section__work__designers {
+.exhibition__section__work__designers, .exhibition__section__work__designers a {
     font-size: .875rem;
     line-height: 1.0;
 }
@@ -937,6 +938,13 @@ p {
 
 .work__description {
     font-size: .875rem;
+}
+
+.work__description--ko {
+    margin-bottom: 20px;
+}
+
+.work__description--en {
     margin-bottom: 24px;
 }
 
