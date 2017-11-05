@@ -611,15 +611,21 @@ p {
 }
 
 .exhibition__years {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    /* position: absolute; */
+    /* left: 50%; */
+    /* transform: translate(-50%, 0); */
     margin-top: 40px;
+    text-align: center;
+}
+
+.exhibition__years__wrapper {
+    display: inline-block;
     overflow: hidden;
+    /* width: 100%; */
 }
 
 .exhibition__years__btn {
-    display: block;
+    display: inline-block;
     float: left;
     width: 8px;
     height: 16px;
@@ -822,7 +828,6 @@ p {
 .exhibition__filter__dropdown .dropdown-menu .dropdown-item:hover {
     color: #161c2a;
 }
-
 
 .exhibition__filter__item {
     width: 100%;
@@ -1450,6 +1455,10 @@ a:hover .exhibition__section__work__image {
 
     .about__curriculum__main__classes {
         margin-top: 30px;
+    }
+
+    .exhibition__years__current-year {
+        margin: 5px 45px;
     }
 
     .alumni__header {

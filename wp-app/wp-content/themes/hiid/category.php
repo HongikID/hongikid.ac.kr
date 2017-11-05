@@ -44,9 +44,11 @@ $title = str_replace("</p>", "", $title);
     ?>
 
     <div class="exhibition__years">
-        <a role="button" class="exhibition__years__btn exhibition__years__btn--prev <?php echo $prevClass ?>" href="<?php echo $prevLink ?>"></a>
-        <h2 class="exhibition__years__current-year"><?php single_cat_title(); ?></h2>
-        <a role="button" class="exhibition__years__btn exhibition__years__btn--next <?php echo $nextClass ?>" href="<?php echo $nextLink ?>"></a>
+        <div class="exhibition__years__wrapper">
+            <a role="button" class="exhibition__years__btn exhibition__years__btn--prev <?php echo $prevClass ?>" href="<?php echo $prevLink ?>"></a>
+            <h2 class="exhibition__years__current-year"><?php single_cat_title(); ?></h2>
+            <a role="button" class="exhibition__years__btn exhibition__years__btn--next <?php echo $nextClass ?>" href="<?php echo $nextLink ?>"></a>
+        </div>
     </div>
 
     <h3 class="exhibition__title"><?php echo $title; ?></h3>
