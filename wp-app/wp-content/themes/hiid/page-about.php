@@ -176,7 +176,7 @@ $data = json_decode(get_the_content(), true);
         <a href="/exhibitions/2017" class="about__cta__link">
             <div class="about__cta">
                 <h4>Learn More</h4>
-                <span>2017 Graduate Show &rsaquo;</span>
+                <span>Graduate Show &gt;</span>
             </div>
         </a>
     </div>
