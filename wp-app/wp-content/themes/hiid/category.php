@@ -199,6 +199,7 @@ $title = str_replace("</p>", "", $title);
         $('#exhibition__filter__dropdown__btn').text('All');
         $("#exhibition__filter__all").addClass('active');
         $(".exhibition__section").removeClass('exhibition__section--hidden');
+        $(window).trigger('resize');
     }
     
     function onProductFilterClicked() {
@@ -208,6 +209,7 @@ $title = str_replace("</p>", "", $title);
         $("#exhibition__section-product").removeClass('exhibition__section--hidden');
         $("#exhibition__section-space").addClass('exhibition__section--hidden');
         $("#exhibition__section-transport").addClass('exhibition__section--hidden');
+        $(window).trigger('resize');
     }
 
     function onSpaceFilterClicked() {
@@ -217,6 +219,7 @@ $title = str_replace("</p>", "", $title);
         $("#exhibition__section-product").addClass('exhibition__section--hidden');
         $("#exhibition__section-space").removeClass('exhibition__section--hidden');
         $("#exhibition__section-transport").addClass('exhibition__section--hidden');
+        $(window).trigger('resize');
     }
 
     function onTransportFilterClicked() {
@@ -226,6 +229,7 @@ $title = str_replace("</p>", "", $title);
         $("#exhibition__section-product").addClass('exhibition__section--hidden');
         $("#exhibition__section-space").addClass('exhibition__section--hidden');
         $("#exhibition__section-transport").removeClass('exhibition__section--hidden');
+        $(window).trigger('resize');
     }
 </script>
 <?php

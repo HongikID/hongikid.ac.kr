@@ -857,6 +857,7 @@ p {
     width: 0;
     height: 0;
     visibility: hidden;
+    display: none;
 }
 
 .exhibition__section__title {
