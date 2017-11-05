@@ -13,7 +13,7 @@ $data = json_decode(get_the_content(), true);
         <a href="<?php echo $exhibitionUrl ?>" class="work__header__link"><?php echo $data['category']?></a>
     </div>
     <article class="work__body row">
-        <div class="col-md-6">
+        <div class="col-12 col-sm-12 col-md-6">
             <h1 class="work__title"><?php echo $data['title']?></h1>
             <h2 class="work__subject"><?php echo $data['subject']?></h2>
             <p class="work__description"><?php echo $data['description']?></p>
@@ -27,28 +27,30 @@ $data = json_decode(get_the_content(), true);
                 ?>
             </ul>
         </div>
-        <div class="work__gallery col-md-6 container-fluid">
+        <div class="work__gallery col-12 col-sm-12 col-md-6">
             <img class="work__gallery__image work__gallery__image--main" src="<?php echo $data['main_image'] ?>" alt="<?php echo "${data['title']} 대표 이미지" ?>">
-            <div class="work__gallery__images row">
-                <?php
-                    $length = count($data['additional_images']);
-                    $col = 12 / $length;
-                    for ($idx = 0; $idx < $length; $idx ++) {
-                        $image = $data['additional_images'][$idx];
-                        $alt_idx = $idx + 1
-                ?>
-                    <div class="work__gallery__image__wrapper col-sm-12 col-md-<?php echo $col ?>">
-                        <img class="work__gallery__image work__gallery__image--additional" src="<?php echo $image ?>" alt="<?php echo "${data['title']} 추가 이미지 ${alt_idx}" ?>">
-                    </div>
-                <?php
-                    }
+            <div class="work__gallery__images">
+                <div class="row">
+                    <?php
+                        $length = count($data['additional_images']);
+                        $col = 12 / $length;
+                        for ($idx = 0; $idx < $length; $idx ++) {
+                            $image = $data['additional_images'][$idx];
+                            $alt_idx = $idx + 1
+                    ?>
+                        <div class="work__gallery__image__wrapper col-12 col-sm-12 col-md-<?php echo $col ?>">
+                            <img class="work__gallery__image work__gallery__image--additional" src="<?php echo $image ?>" alt="<?php echo "${data['title']} 추가 이미지 ${alt_idx}" ?>">
+                        </div>
+                    <?php
+                        }
 
-                ?>
+                    ?>
+                </div>
             </div>
         </div>
     </article>
     <div class="work__footer row">
-        <div class="work__footer__wrapper work__footer__wrapper--prev col-sm-6">
+        <div class="work__footer__wrapper work__footer__wrapper--prev col-6">
         <?php
         $prev_post = get_previous_post(true);
         if (!empty($prev_post)) {
@@ -68,7 +70,7 @@ $data = json_decode(get_the_content(), true);
         } ?>
         </div>
 
-        <div class="work__footer__wrapper work__footer__wrapper--next col-sm-6">
+        <div class="work__footer__wrapper work__footer__wrapper--next col-6">
         <?php
         $next_post = get_next_post(true);
         if (!empty($next_post)) {

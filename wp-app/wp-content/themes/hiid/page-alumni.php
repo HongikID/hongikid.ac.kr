@@ -25,7 +25,7 @@ $data = json_decode(get_the_content(), true);
                 </div>
                 <div class="col-sm-12 col-md-6 alumni__header__section">
                     <h3 class="alumni__update__title">Update Your Info</h3>
-                    <a href="<?php echo $data['update_form_url'] ?>" class="alumni__update__link">산디과 동문회 연락처 입력 &gt;</a>
+                    <a href="<?php echo $data['update_form_url'] ?>" class="alumni__update__link">산디과 동문회 연락처 입력</a>
                 </div>
             </div>
         </div>
@@ -43,16 +43,13 @@ $data = json_decode(get_the_content(), true);
                 <li class="alumni__member">
                     <a data-toggle="collapse" class="alumni__member__header__toggle" href="#alumni__member__body-<?php echo $idx ?>">
                         <div id="alumni__member__header-<?php echo $idx ?>" class="alumni__member__header row" role="tab">
-                            <div class="col-sm-2 col-md-2">
+                            <div class="col-3 col-md-2">
                                 <span class="alumni__member__name"><?php echo $member['name'] ?></span>
                             </div>
-                            <div class="col-sm-3 col-md-2">
-                                <span class="alumni__member__nation"><?php echo $member['nation'] ?></span>
+                            <div class="col-7 col-md-9">
+                                <span class="alumni__member__summary"><?php echo $member['summary'] ?>, <?php echo $member['nation'] ?></span>
                             </div>
-                            <div class="col-sm-6 col-md-7">
-                                <span class="alumni__member__summary"><?php echo $member['summary'] ?></span>
-                            </div>
-                            <div class="col-sm-1 col-md-1">
+                            <div class="col-2 col-md-1">
                                 <span class="alumni__member__toggle"></span>
                             </div>
                         </div>
@@ -63,10 +60,10 @@ $data = json_decode(get_the_content(), true);
                                 foreach ($member['positions'] as $position) {
                             ?>
                             <li class="alumni__member__position row">
-                                <div class="col-sm-2 col-md-2">
+                                <div class="col-sm-2">
                                     <span class="alumni__member__position__label"><?php echo $position['range'] ?></span>
                                 </div>
-                                <div class="col-sm-10 col-md-10">
+                                <div class="col-sm-10">
                                     <span class="alumni__member__position__description"><?php echo $position['position'] ?></span>
                                 </div>
                             </li>

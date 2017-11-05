@@ -82,12 +82,26 @@ $title = str_replace("</p>", "", $title);
 
     </div>
 
-    <ul class="exhibition__filter">
+    <ul class="exhibition__filter d-none d-xs-none d-sm-none d-md-none d-lg-flex">
         <li class="exhibition__filter__item"><a id="exhibition__filter__all" class="exhibition__filter__item-link active" tabindex="0" onclick="onAllFilterClicked()">All</a></li>
         <li class="exhibition__filter__item"><a id="exhibition__filter__product" class="exhibition__filter__item-link" tabindex="1" onclick="onProductFilterClicked()">Product</a></li>
         <li class="exhibition__filter__item"><a id="exhibition__filter__space" class="exhibition__filter__item-link" tabindex="2" onclick="onSpaceFilterClicked()">Space</a></li>
         <li class="exhibition__filter__item"><a id="exhibition__filter__transport" class="exhibition__filter__item-link" tabindex="3" onclick="onTransportFilterClicked()">Transport</a></li>
     </ul>
+
+    <div class="exhibition__filter--mobile d-md-block d-lg-none d-xl-none">
+        <div class="exhibition__filter__dropdown dropdown">
+            <button class="exhibition__filter__dropdown__btn btn btn-secondary dropdown-toggle" type="button" id="exhibition__filter__dropdown__btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+            </button>
+            <div class="dropdown-menu" aria-labelledby="exhibition__filter__dropdown__btn">
+                <a class="dropdown-item" tabindex="0" onclick="onAllFilterClicked()">All</a>
+                <a class="dropdown-item" tabindex="1" onclick="onProductFilterClicked()">Product</a>
+                <a class="dropdown-item" tabindex="2" onclick="onSpaceFilterClicked()">Space</a>
+                <a class="dropdown-item" tabindex="3" onclick="onTransportFilterClicked()">Transport</a>
+            </div>
+        </div>
+    </div>
 
     <div class="exhibition__contents">
         <section id="exhibition__section-product" class="exhibition__section">
@@ -160,12 +174,14 @@ $title = str_replace("</p>", "", $title);
 
     function onAllFilterClicked() {
         deactivate();
+        $('#exhibition__filter__dropdown__btn').text('All');
         $("#exhibition__filter__all").addClass('active');
         $(".exhibition__section").removeClass('exhibition__section--hidden');
     }
     
     function onProductFilterClicked() {
         deactivate();
+        $('#exhibition__filter__dropdown__btn').text('Product');
         $("#exhibition__filter__product").addClass('active');
         $("#exhibition__section-product").removeClass('exhibition__section--hidden');
         $("#exhibition__section-space").addClass('exhibition__section--hidden');
@@ -174,6 +190,7 @@ $title = str_replace("</p>", "", $title);
 
     function onSpaceFilterClicked() {
         deactivate();
+        $('#exhibition__filter__dropdown__btn').text('Space');
         $("#exhibition__filter__space").addClass('active');
         $("#exhibition__section-product").addClass('exhibition__section--hidden');
         $("#exhibition__section-space").removeClass('exhibition__section--hidden');
@@ -182,6 +199,7 @@ $title = str_replace("</p>", "", $title);
 
     function onTransportFilterClicked() {
         deactivate();
+        $('#exhibition__filter__dropdown__btn').text('Transport');
         $("#exhibition__filter__transport").addClass('active');
         $("#exhibition__section-product").addClass('exhibition__section--hidden');
         $("#exhibition__section-space").addClass('exhibition__section--hidden');

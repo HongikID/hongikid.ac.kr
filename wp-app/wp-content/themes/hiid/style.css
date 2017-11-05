@@ -20,7 +20,9 @@ body {
 }
 
 body, html {
+    max-width: 100vw;
     height: 100%;
+    /* overflow-x: hidden; */
 }
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -127,7 +129,33 @@ p {
     height: 1.3125rem;
 }
 
-.dropdown-menu {
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #0047ba;
+}
+
+.navbar-light .navbar-nav .nav-link:focus.dropdown-toggle::after, .navbar-light .navbar-nav.nav-link:hover.dropdown-toggle::after, .header__nav .navbar-nav .current-menu-parent .nav-link.dropdown-toggle::after {
+    content: '';
+    border: solid #0047ba;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    border: solid #9b9b9b;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left: 10px;
+}
+
+.header__nav .dropdown-menu {
     width: 100%;
     border: none;
     border-radius: 0;
@@ -136,7 +164,7 @@ p {
     top: calc(100% + 4px);
 }
 
-.dropdown-menu-wrapper {
+.header__nav .dropdown-menu-wrapper {
     position: fixed;
     top: 57px;
     background: #ffffff;
@@ -145,7 +173,7 @@ p {
     border-bottom: solid 1px #c0c0c0;
 }
 
-.dropdown-menu .dropdown-item {
+.header__nav .dropdown-menu .dropdown-item {
     position: relative;
     font-family: 'Lato', sans-serif;
     font-size: 1.125rem;
@@ -154,13 +182,13 @@ p {
     letter-spacing: .125rem;
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.header__nav .dropdown-item.active, .header__nav .dropdown-item:active {
     background-color: inherit;
     font-weight: 700;
     color: inherit;
 }
 
-.dropdown-item:focus, .dropdown-item:hover {
+.header__nav .dropdown-item:focus, .header__nav .dropdown-item:hover {
     color: inherit;
     background-color: inherit;
     font-weight: 700;
@@ -208,11 +236,13 @@ p {
 .footer__address address {
     font-size: .875rem;
     margin-top: .75rem;
+    font-weight: 400;
 }
 
 .footer__address a {
     font-size: .875rem;
     color: #161c2a;
+    font-weight: 400;
 }
 
 .about {
@@ -225,9 +255,10 @@ p {
 }
 
 .about__welcome__logo {
+    /* overflow: hidden; */
     position: absolute;
-    width: 330px;
-    height: 120px;
+    width: 320px;
+    height: 116px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -265,6 +296,7 @@ p {
 }
 
 #about__welcome__logo--dark::after {
+    max-width: 50vw;
     content: '';
     width: 658px;
     height: 611px;
@@ -276,6 +308,10 @@ p {
 
 .about__about {
     position: relative;
+}
+
+.about__about__wrapper {
+
 }
 
 .about__section-title {
@@ -300,6 +336,7 @@ p {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     border-bottom: 1px solid #0047ba;
+    /* text-decoration: underline; */
 }
 
 .about__about__slogan:last-child {
@@ -315,21 +352,30 @@ p {
     font-size: .875rem;
 }
 
+.about__faculty {
+    position: relative;
+}
+
 .about__faculty::after {
-    content: '';
-    position: absolute;
-    background: url('assets/images/hid-bg-sprite.svg') no-repeat;
+    content: url('assets/images/hid-bg-sprite.svg');
+    max-width: 100vw;
     width: 560px;
-    height: 330px;
+    /* height: 330px; */
+    position: absolute;
     right: 2px;
     margin-top: 110px;
+    overflow-x: hidden;
 }
 
 .about__faculty__philosophy {
     background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
     background-size: 100% 100%;
-    padding: 2.5rem 2.5rem 2.5rem 14.75%;
+    padding: 2.5rem;
     min-height: 1155px;
+}
+
+.about__faculty__philosophy__wrapper {
+    padding-left: 4rem;
 }
 
 .about__faculty__philosophy__title {
@@ -338,14 +384,13 @@ p {
     letter-spacing: .5rem;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 5.375rem;
+    margin: 24px 0 64px 0;
 }
 
 .about__faculty__philosophy__thesis {
     font-size: 1.125rem;
     font-weight: 500;
     color: #ffffff;
-    margin-top: 2.5rem;
 }
 
 .about__faculty__philosophy__thesis__description {
@@ -358,8 +403,7 @@ p {
 }
 
 .about__faculty__professors {
-    padding-right: 14.75%;
-
+    /* padding-right: 14.75%; */
 }
 
 .about__faculty__professors__section {
@@ -367,7 +411,7 @@ p {
 }
 
 .about__faculty__professors__section:first-child {
-    margin-top: 120px;
+    margin-top: 180px;
 }
 
 .about__faculty__professors__title {
@@ -380,12 +424,17 @@ p {
 }
 
 .about__faculty__professors__professor__list {
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* text-align: center; */
 }
 
 .about__faculty__professors__professor {
-    float: left;
-    margin-right: 1.25rem;
+    /* float: left; */
+    /* margin-right: 1.25rem; */
+}
+
+.about__faculty__professors__professor:last-child {
+    margin-right: 0;
 }
 
 .about__faculty__professors__professor__name {
@@ -394,8 +443,12 @@ p {
     font-weight: 400;
 }
 
+.about__faculty__professors__professor__image {
+    width: 100%;
+}
+
 .about__curriculum__main {
-    padding: 0 14.75%;
+    /* padding: 0; */
 }
 
 .about__curriculum__main__title {
@@ -406,7 +459,8 @@ p {
 }
 
 .about__curriculum__main__nav-item {
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .about__curriculum__main__nav-item:last-child {
@@ -414,7 +468,10 @@ p {
 }
 
 .about__curriculum__main__nav {
+    overflow: hidden;
+    /* display: inline-flex; */
     margin-top: 40px;
+    /* justify-content: space-around; */
 }
 
 .about__curriculum__main__nav-link {
@@ -432,7 +489,8 @@ p {
     background: none;
     border-radius: 0;
     color: #0047ba;
-    border-bottom: 3px solid #0047ba;
+    /* border-bottom: 3px solid #0047ba; */
+    text-decoration: underline;
 }
 
 .about__curriculum__main__classes {
@@ -440,13 +498,17 @@ p {
 }
 
 .about__curriculum__main__classes__class {
-    padding: 12.5px;
+    padding: 13px;
     border-bottom: solid 1px #9b9b9b;
 }
 
 .about__curriculum__main__classes__class__name {
     font-size: 1.125rem;
     line-height: 1.0;
+}
+
+.about__curriculum__main__classes__class__name:hover {
+    text-decoration: none;
 }
 
 .about__curriculum__main__classes__class__name::after {
@@ -486,18 +548,26 @@ p {
 }
 
 .about__cta {
-    margin: 90px 14.75%;
+    margin: 90px 0;
     padding: 28px;
     background-color: #161c2a;
     text-align: center;
 }
 
-.about__cta h4, .about__cta a {
+.about__cta h4, .about__cta span {
     color: #ffffff;
     font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
     text-transform: uppercase;
     line-height: 1.0;
+}
+
+.about__cta__link:hover {
+    text-decoration: none;
+}
+
+.about__cta__link:hover span {
+    text-decoration: underline;
 }
 
 .about__cta h4 {
@@ -506,12 +576,13 @@ p {
     margin-bottom: 18px;
 }
 
-.about__cta a {
+.about__cta span {
     font-weight: 400;
     letter-spacing: 3px;
 }
 
 .exhibition {
+    position: relative;
     padding-top: 3.5rem;
 }
 
@@ -651,6 +722,80 @@ p {
     list-style: none;
 }
 
+.exhibition__filter, .exhibition__filter--mobile {
+    margin: 40px auto 67px auto;
+}
+
+.exhibition__filter--mobile {
+    text-align: center;
+}
+
+.exhibition__filter__dropdown__btn {
+    position: relative;
+    border-radius: 0;
+    background: none;
+    border: 1px solid #161c2a;
+    color: inherit;
+    width: 100%;
+    max-width: 260px;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: .10625rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.exhibition__filter__dropdown__btn.dropdown-toggle::after {
+    position: absolute;
+    right: 24px;
+    top: 11px;
+    content: '';
+    border: solid #161c2a;
+    border-width: 0 1px 1px 0;
+    display: inline-block;
+    padding: .28125rem;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.exhibition__filter__dropdown__btn:not([disabled]):not(.disabled).active, .exhibition__filter__dropdown__btn:not([disabled]):not(.disabled):active, .show>.exhibition__filter__dropdown__btn.dropdown-toggle {
+    background: none;
+    color: inherit;
+    border: 1px solid #161c2a;
+    box-shadow: none;
+}
+
+.exhibition__filter__dropdown__btn:hover, .exhibition__filter__dropdown__btn:focus {
+    background: inherit;
+    color: inherit;
+    border: 1px solid #161c2a;
+}
+
+.exhibition__filter__dropdown .dropdown-menu {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 0;
+    border-bottom: 1px solid #161c2a;
+    border-left: 1px solid #161c2a;
+    border-right: 1px solid #161c2a;
+    margin: 0;
+}
+
+.exhibition__filter__dropdown .dropdown-menu .dropdown-item {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    letter-spacing: .10625rem;
+    text-align: center;
+    color: #c0c0c0;
+}
+
+.exhibition__filter__dropdown .dropdown-menu .dropdown-item:hover {
+    color: #161c2a;
+}
+
+
 .exhibition__filter__item {
     width: 100%;
     text-align: center;
@@ -732,6 +877,7 @@ p {
 
 .work {
     padding-top: 3.5rem;
+    overflow-x: hidden;
 }
 
 .work__header {
@@ -905,7 +1051,7 @@ p {
 
 .alumni__header {
     background-color: #0047ba;
-    padding: 41px 0;
+    padding: 41px 0 67px 0;
 }
 
 .alumni__header__title {
@@ -917,7 +1063,7 @@ p {
 .alumni__header__slogan {
     color: #ffffff;
     text-transform: uppercase;
-    margin: 40px 0 65px 0;
+    margin: 40px 0 15px 0;
     font-size: 3.125rem;
     letter-spacing: .5rem;
     line-height: 1.5;
@@ -928,6 +1074,7 @@ p {
     font-size: 0.875rem;
     text-transform: uppercase;
     letter-spacing: 0.18rem;
+    margin-top: 50px;
 }
 
 .alumni__community__title {
@@ -1011,6 +1158,7 @@ p {
 .alumni__member__name {
     font-size: 1.125rem;
     line-height: 1.0;
+    font-weight: 400;
     color: #0047ba;
 }
 
@@ -1047,10 +1195,6 @@ p {
     line-height: 1.17;
     letter-spacing: -.025rem;
     color: #0047ba;
-}
-
-.alumni__member__position__label::before {
-    content: '- ';
 }
 
 .alumni__member__position__description {
@@ -1106,6 +1250,7 @@ p {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.0;
+    color: #0047ba;
 }
 
 .contact__admission__link {
@@ -1113,7 +1258,7 @@ p {
     font-size: .875rem;
     font-weight: 500;
     line-height: 2.0;
-    color: #0047ba;
+    /* color: #0047ba; */
 }
 
 .contact__admission__link::after {
@@ -1167,10 +1312,70 @@ p {
         height: 1.3125rem;
         background-image: url("assets/images/logo-small.svg");
     }
+
+    .footer {
+        padding: 30px 30px 40px 30px;
+    }
+
+    .footer__address {
+        margin-top: 40px;
+    }
+
+    .about__faculty__philosophy {
+        min-height: 0;
+        padding-bottom: 120px;
+        padding-left: 10%;
+    }
+
+    .about__about__slogan {
+        font-size: 1.875rem;
+    }
+
+    .about__faculty__professors__section:first-child {
+        margin-top: 90px;
+    }
+
+    .about__faculty__philosophy__title {
+        font-size: 2.5rem;
+    }
+
+    .about__curriculum__main__title {
+        font-size: 2.5rem;
+    }
+
+    .alumni__header {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .alumni__header__slogan {
+        font-size: 1.75rem;
+        line-height: 2.18;
+        letter-spacing: .2812rem;
+    }
+
+    .alumni__members__slogan {
+        font-size: 1.75rem;
+        line-height: 1.79;
+        letter-spacing: .28125rem;
+    }
+
+    .alumni__members {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 /* xs */
 @media (max-width: 575px) {
+
+    .about__faculty__philosophy__title {
+        font-size: 2.2rem;
+    }
+
+    .about__curriculum__main__title {
+        font-size: 2.2rem;
+    }
 
 }
 
@@ -1183,6 +1388,10 @@ p {
 @media (min-width: 768px) and (max-width: 991px) {
     #header__nav__menu {
         padding: 0 3rem;
+    }
+
+    .about__about__slogan {
+        font-size: 2rem;
     }
 }
 
