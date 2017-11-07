@@ -31,15 +31,13 @@ $title = str_replace("</p>", "", $title);
         if ($currentCategoryIdx + 1 < count($categories)) {
             $prev = $categories[$currentCategoryIdx + 1];
             $prevClass = "";
-            $prevSlug = $prev->slug;
-            $prevLink = "/exhibitions/${prevSlug}";
+            $prevLink = get_category_link($prev->term_id);
         }
 
         if ($currentCategoryIdx - 1 >= 0) {
             $next = $categories[$currentCategoryIdx - 1];
             $nextClass = "";
-            $nextSlug = $next->slug;
-            $nextLink = "/exhibitions/${nextSlug}";
+            $nextLink = get_category_link($next->term_id);
         }
     ?>
 
