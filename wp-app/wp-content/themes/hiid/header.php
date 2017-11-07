@@ -8,6 +8,10 @@
 
     <title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php bloginfo('name'); ?><?php wp_title('|'); ?>"/>
+    <meta property="og:url" content="<?php echo (is_category() ? get_category_link(get_the_category()[0]->term_id)  : get_the_permalink());?>">
+
     <?php wp_head(); ?>
     <link rel="stylesheet" href="https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
