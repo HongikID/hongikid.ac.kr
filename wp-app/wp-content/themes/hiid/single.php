@@ -1,7 +1,6 @@
 <?php
 get_header();
 
-the_post();
 $currentPostId = get_the_ID();
 $data = json_decode(get_the_content(), true);
 ?>
@@ -9,8 +8,7 @@ $data = json_decode(get_the_content(), true);
     <div class="work__header">
         <?php
             $currentCat = get_the_category()[0];
-            $exhibitionSlug = $currentCat->slug;
-            $exhibitionUrl = "/exhibitions/${exhibitionSlug}";
+            $exhibitionUrl = get_category_link($currentCat->term_id);
         ?>
         <a href="<?php echo $exhibitionUrl ?>" class="work__header__link"><?php echo $data['category']?></a>
     </div>
