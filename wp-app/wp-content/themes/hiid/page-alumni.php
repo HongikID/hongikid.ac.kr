@@ -7,7 +7,7 @@ $data = json_decode(get_the_content(), true);
     <section class="alumni__header">
         <div class="container">
             <h1 class="alumni__header__title">HID Community</h1>
-            <h2 class="alumni__header__slogan">HID<br>In All Field<br>In All World</h2>
+            <h2 class="alumni__header__slogan">HID<br>In All Fields<br>In the World</h2>
             <div class="row">
                 <div class="col-sm-12 col-md-6 alumni__header__section">
                     <h3 class="alumni__community__title">Online Community</h3>
@@ -33,7 +33,7 @@ $data = json_decode(get_the_content(), true);
     <section class="alumni__members">
         <div class="container">
             <h1 class="alumni__members__title">Alumni</h1>
-            <h2 class="alumni__members__slogan">HID Throughout<br>The World Help You,<br>And Share Information.</h2>
+            <h2 class="alumni__members__slogan">HID Throughout the World</h2>
             <ul id="alumni__members__list" class="alumni__members__list" role="tablist">
                 <?php
                     $length = count($data['alumni']);
