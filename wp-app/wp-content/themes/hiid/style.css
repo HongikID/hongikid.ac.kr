@@ -411,9 +411,7 @@ p {
 
 .about__faculty__philosophy {
     padding: 2.5rem 2.5rem 2.5rem 0;
-    background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
-    background-size: 100% 100%;
-    /*min-height: 1155px;*/
+    background: none;
 }
 
 .about__faculty__philosophy__wrapper {
@@ -1461,6 +1459,8 @@ a:hover .exhibition__section__work__image {
         padding-bottom: 120px;
         padding-left: 15px;
         padding-right: 0;
+        background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
+        background-size: 100% 100%;
     }
 
     .about__about__slogan {
