@@ -376,10 +376,6 @@ p {
     margin: 40px 0 63px 0;
 }
 
-.about__about__slogan:last-child {
-    /* margin-top: 1.5rem; */
-}
-
 .about__about__description-container {
     border: 1px solid #c0c0c0;
     padding: 2.5rem 1.875rem 1.5rem 1.875rem;
@@ -397,7 +393,6 @@ p {
     content: url('assets/images/hid-bg-sprite.svg');
     max-width: 100vw;
     width: 610px;
-    /* height: 330px; */
     position: absolute;
     right: 2px;
     margin-top: 110px;
@@ -405,17 +400,21 @@ p {
 }
 
 .about__faculty__wrapper {
-    background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
-    background-size: 50% 100%;
+    position: relative;
+}
+
+.about__faculty__wrapper::before {
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: #0047ba;
+    background-size: cover;
+    position: absolute;
 }
 
 .about__faculty__philosophy {
     padding: 2.5rem 2.5rem 2.5rem 0;
     background: none;
-}
-
-.about__faculty__philosophy__wrapper {
-    /* padding-left: 4rem; */
 }
 
 .about__faculty__philosophy__title {
@@ -440,10 +439,6 @@ p {
     margin-top: 1.25rem;
     padding-bottom: 2.5rem;
     border-bottom: 1px #ffffff solid;
-}
-
-.about__faculty__professors {
-    /* padding-right: 14.75%; */
 }
 
 .about__faculty__professors__section {
@@ -1459,8 +1454,7 @@ a:hover .exhibition__section__work__image {
         padding-bottom: 120px;
         padding-left: 15px;
         padding-right: 0;
-        background: url("assets/images/hid-about-faculty-philosophy-bg.svg") no-repeat;
-        background-size: 100% 100%;
+        background: #0047ba;
     }
 
     .about__about__slogan {
@@ -1477,12 +1471,8 @@ a:hover .exhibition__section__work__image {
         overflow-x: hidden;
     }
 
-    .about__faculty__wrapper {
+    .about__faculty__wrapper::before {
         background: none;
-    }
-
-    .about__faculty__philosophy__wrapper {
-        /* padding: 0 30px; */
     }
 
     .about__faculty__wrapper .container {
