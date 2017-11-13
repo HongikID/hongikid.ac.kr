@@ -62,7 +62,6 @@ p, a {
 
 a {
     line-height: 1.5;
-    /* color: #0047ba; */
 }
 
 p {
@@ -282,7 +281,6 @@ p {
 }
 
 .about__welcome__logo {
-    /* overflow: hidden; */
     position: absolute;
     width: 320px;
     height: 116px;
@@ -458,16 +456,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-.about__faculty__professors__professor__list {
-    /* overflow: hidden; */
-    /* text-align: center; */
-}
-
-.about__faculty__professors__professor {
-    /* float: left; */
-    /* margin-right: 1.25rem; */
-}
-
 .about__faculty__professors__professor:last-child {
     margin-right: 0;
 }
@@ -483,7 +471,6 @@ p {
 }
 
 .about__curriculum__main {
-    /* padding: 0; */
     margin-top: 169px;
 }
 
@@ -505,10 +492,7 @@ p {
 }
 
 .about__curriculum__main__nav {
-    /* overflow: scroll; */
-    /* display: inline-block; */
     margin-top: 40px;
-    /* justify-content: space-around; */
 }
 
 .about__curriculum__main__nav-link {
@@ -526,7 +510,6 @@ p {
     background: none;
     border-radius: 0;
     color: #0047ba;
-    /* border-bottom: 3px solid #0047ba; */
     text-decoration: underline;
 }
 
@@ -624,9 +607,6 @@ p {
 }
 
 .exhibition__years {
-    /* position: absolute; */
-    /* left: 50%; */
-    /* transform: translate(-50%, 0); */
     margin-top: 40px;
     text-align: center;
 }
@@ -634,7 +614,6 @@ p {
 .exhibition__years__wrapper {
     display: inline-block;
     overflow: hidden;
-    /* width: 100%; */
 }
 
 .exhibition__years__btn {
@@ -874,7 +853,6 @@ p {
 
 .exhibition__filter__item-link.active {
     color: #000000;
-    /* text-decoration: underline; */
 }
 
 .exhibition__filter__item-link:hover {
@@ -1292,7 +1270,6 @@ a:hover .exhibition__section__work__image {
     font-size: .875rem;
     line-height: 1.17;
     letter-spacing: -.025rem;
-    /* color: #0047ba; */
     font-weight: 400;
 }
 
@@ -1343,10 +1320,6 @@ a:hover .exhibition__section__work__image {
     margin-bottom: 0;
 }
 
-.contact__admission__title {
-    /* margin-top: 108px; */
-}
-
 .contact__admission__subject {
     margin: 0 0 36px 0;
     font-family: 'Noto Sans Korean', sans-serif;
@@ -1361,7 +1334,6 @@ a:hover .exhibition__section__work__image {
     font-size: .875rem;
     font-weight: 500;
     line-height: 2.0;
-    /* color: #0047ba; */
 }
 
 .contact__admission__link::after {
@@ -1405,7 +1377,6 @@ a:hover .exhibition__section__work__image {
     .dropdown-menu .dropdown-item {
         text-align: left;
         padding: 6px;
-        /* text-align: left; */
     }
 
     #header__nav__menu {
