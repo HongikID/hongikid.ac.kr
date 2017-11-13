@@ -1,5 +1,10 @@
 <?php
-    get_header();
     the_post();
-    the_content();
-    get_footer();
+
+    if (is_front_page()) {
+        echo get_the_content();
+    } else {
+        get_header();
+        the_content();
+        get_footer();
+    }
